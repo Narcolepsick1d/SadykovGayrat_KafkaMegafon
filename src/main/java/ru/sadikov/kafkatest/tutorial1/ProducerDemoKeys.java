@@ -20,6 +20,7 @@ public class ProducerDemoKeys {
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
+        //Тут количество n раза пока сам поставил 10
         for (int i = 0; i < 10; i++) {
             String topic = "first_topic";
             String value = "{a,b,c "+ LocalDateTime.now()+"}";
